@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow Dashboard</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">
+      <span class="logo">✨ TaskFlow</span>
+      <span class="tagline">Eat That Frog, then fly.</span>
+    </div>
+    <div class="nav-right">
+      <!-- <input id="search" class="search" type="text" placeholder="Search tasks..." /> -->
+      <button id="logoutBtn" class="btn small">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li class="active">🏠 Dashboard</li>
+        <li>🐸 Frog Focus</li>
+        <li>📈 Stats</li>
+        <li>⚙️ Settings</li>
+      </ul>
+      <div class="tip">
+        <strong>Tip:</strong> Do your 🐸 first thing. No distractions.{MIT-Most Important Task}
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main style="text-align:center" class="main">
+      <!-- Greeting & Stats -->
+      <section class="top-row">
+        <div class="hello">
+          <h2 style="text-align:center">Hi, champ 👋</h2>
+          <p>Pick your <strong>Frog (MIT)</strong>, schedule it, and go!</p>
+        </div>
+        <div class="stats">
+          <div class="card">
+            <h3>Total</h3>
+            <p id="stat-total">0</p>
+          </div>
+          <div class="card">
+            <h3>Completed</h3>
+            <p id="stat-done">0</p>
+          </div>
+          <div class="card">
+            <h3>Pending</h3>
+            <p id="stat-pending">0</p>
+          </div>
+          <div class="card">
+            <h3>Frogs</h3>
+            <p id="stat-frog">0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Frog -->
+      <!-- <section class="frog-wrap">
+        <div class="frog-card">
+          <div class="frog-header">
+            <h3>🐸 Today’s Frog (MIT)</h3>
+          </div>
+          <p id="frogText" class="frog-text">No frog yet. Choose one from your tasks below.</p>
+          <div class="frog-actions">
+            <button id="markFrogDone" class="btn">Mark Frog Done</button>
+            <button id="clearFrog" class="btn ghost">Clear</button>
+          </div>
+          <div id="frogCongrats" class="confetti hidden">🎉 Nice! Frog eaten!</div>
+        </div>
+      </section> -->
+
+      <!-- Add Task -->
+      <section class="add-task">
+        <input type="text" id="taskTitle" placeholder="New task title..." />
+        <select id="taskPriority">
+          <option value="Frog">🐸 Frog (MIT)</option>
+          <option value="High">High</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <input type="date" id="taskDate" />
+        <input type="time" id="taskTime" />
+        <button id="addTaskBtn" class="btn">➕ Add Task</button>
+      </section>
+
+      <!-- Filters -->
+      <section class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="pending">Pending</button>
+        <button class="chip" data-filter="completed">Completed</button>
+        <button class="chip" data-filter="frog">Frog</button>
+      </section>
+
+      <div class="grid">
+        <!-- Task List -->
+        <section class="tasks">
+          <h3>Your Tasks</h3>
+          <ul id="taskList"></ul>
+        </section>
+
+        <!-- Day Schedule -->
+        <section class="schedule">
+          <h3>Schedule Today</h3>
+          <div class="slots">
+            <div class="slot">
+              <h4>🌅 Morning</h4>
+              <ul id="slot-morning"></ul>
+            </div>
+            <div class="slot">
+              <h4>🌤 Afternoon</h4>
+              <ul id="slot-afternoon"></ul>
+            </div>
+            <div class="slot">
+              <h4>🌙 Evening</h4>
+              <ul id="slot-evening"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <small>Made with ☁️ + 🐸 energy. Stay consistent.</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>

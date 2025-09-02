@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="login">
+    <form action="/php" method="post">
+      <p style=" font-weight:600;text-align:center; color: #333;
+      margin-bottom: 20px;">WELCOME BACK👋</p>
+      <div class="emailblock">
+        <label style=" color:rgb(72, 154, 221);font-weight:600;" for="email">Enter your email:</label>
+        <input name="email" id="email" type="email" placeholder="Enter your registered email" required></div>
+
+      <div class="passwordblock">
+         <label style=" color:rgb(72, 154, 221);font-weight:600;" for="password">Enter your password:</label>
+         <input name="password" id="password" type="password" placeholder="Password" required>
+      </div>
+      <div class="buttonblock">
+     <div > 
+      <button class="btn" type="submit">Log in</button>
+    </div> 
+    <div >
+      <button class="btn" type="reset">Reset</button>
+  </div>
+    </div>
+    <div class="extrablock">
+      <div class="social-login">
+  <p style=" text-align:center;color:rgb(72, 154, 221);font-weight:600;" >Or log in with:</p>
+  <button class="social-btn google btn">Google</button>
+  <button class="social-btn github btn">GitHub</button>
+  <button class="social-btn facebook btn">Facebook</button>
+</div>
+  <div> <p style="text-align:center">Don’t have an account? <a href="registration.html">Register</a></p></div>
+  </div>
+    </div>
+    </form>
+
+    
+</body>
+</html>
